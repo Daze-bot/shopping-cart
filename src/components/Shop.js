@@ -1,3 +1,5 @@
+import React from "react";
+
 const Shop = () => {
   return (
     <div>
@@ -6,4 +8,4 @@ const Shop = () => {
   );
 };
 
-export default Shop
+export default Shop;
