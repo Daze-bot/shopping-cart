@@ -29,7 +29,7 @@ const controllers = [
   {
     name: 'DualShock 4 Wireless Controller',
     console: 'PlayStation 4',
-    price: 59.99,
+    price: 54.99,
     images: [
       PS4WirelessFront,
       PS4WirelessSide
