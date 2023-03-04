@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Contact from "./components/Contact";
@@ -7,6 +7,8 @@ import './styles/app.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+
   return (
     <BrowserRouter>
       <Nav />

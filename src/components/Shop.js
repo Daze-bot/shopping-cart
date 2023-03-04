@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState} from "react";
 import controllers from "../products/controllers";
+import consoles from "../products/consoles";
 
 const Shop = () => {
+  const [productType, setProductType] = useState('allProducts');
+
   return (
-    <div>
+    <div className="shopPage">
       <h1>Shop</h1>
-      <img src={controllers[3].images[0]} alt="controller"></img>
+      <div className="shopItemDisplay">
+
+      </div>
     </div>
   );
 };
