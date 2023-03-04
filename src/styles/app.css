@@ -32,3 +32,20 @@ nav a {
 .navLogo {
   cursor: pointer;
 }
+
+.shopItemDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.itemCard {
+  display: flex;
+  width: auto;
+  height: 400px;
+}
+
+.itemCardImg {
+  max-height: 200px;
+  max-width: 100%;
+}
