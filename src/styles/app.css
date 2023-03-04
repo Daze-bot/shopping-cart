@@ -12,6 +12,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  min-width: 810px;
   background-color: #333;
   color: white;
 }
@@ -33,19 +34,96 @@ nav a {
   cursor: pointer;
 }
 
+.shopPage {
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.shopSidebar {
+  width: 150px;
+}
+
 .shopItemDisplay {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  max-width: 1200px;
+}
+
+.shopItemDisplay h1 {
+  border-bottom: 1px solid grey;
 }
 
 .itemCard {
   display: flex;
-  width: auto;
-  height: 400px;
+  justify-content: space-between;
+  align-items: start;
+  min-height: 235px;
+  min-width: 500px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid grey;
+}
+
+.imgHolder {
+  width: 33%;
+  padding-right: 16px;
 }
 
 .itemCardImg {
   max-height: 200px;
   max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.itemCardProductInfo {
+  width: 47%;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 0.9rem;
+}
+
+.itemCardProductInfo p {
+  margin-bottom: 8px;
+}
+
+.shopProductName {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.shopProductName:hover {
+  cursor: pointer;
+  color: #c45500;
+}
+
+.itemCardProductInfo span {
+  font-weight: bold;
+}
+
+.itemCardPurchase {
+  width: 20%;
+  padding-left: 16px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.itemCardPurchase button {
+  cursor: pointer;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: #FFD814;
+}
+
+.itemCardPurchase button:hover {
+  background-color: #F7CA00;
 }

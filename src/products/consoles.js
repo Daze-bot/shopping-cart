@@ -1,5 +1,5 @@
 import XboxX from '../imgs/products/xbox-series-x.png';
-import XboxS from '../imgs/products/xbox-series-s.jpg';
+import XboxS from '../imgs/products/xbox-series-s.webp';
 import XboxOne from '../imgs/products/xbox-one.jpg';
 import PS5 from '../imgs/products/ps5.webp';
 import PS4 from '../imgs/products/ps4.webp';
