@@ -7,14 +7,21 @@
   list-style: none;
 }
 
+#root {
+  position: relative;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
-  min-width: 810px;
+  min-height: 95px;
+  min-width: 1010px;
   background-color: #333;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navLinks {
@@ -41,20 +48,58 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: start;
+  min-width: 1010px;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .shopSidebar {
-  width: 150px;
+  min-width: 250px;
+  position: sticky;
+  top: 73px;
+  padding-top: 53px;
+}
+
+.shopCategories {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 16px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shopCategories p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.shopCategories li {
+  display: inline-block;
+  color: blue;
+}
+
+.list-item.active {
+  text-decoration: underline;
+}
+
+.shopCategories li:hover {
+  color: #c45500;
+  cursor: pointer;
 }
 
 .shopItemDisplay {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  width: 100%;
+  padding-left: 32px;
+  margin-bottom: 10vh;
 }
 
 .shopItemDisplay h1 {
   border-bottom: 1px solid grey;
+  padding-bottom: 16px;
 }
 
 .itemCard {
@@ -62,7 +107,7 @@ nav a {
   justify-content: space-between;
   align-items: start;
   min-height: 235px;
-  min-width: 500px;
+  min-width: 600px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid grey;
@@ -71,6 +116,7 @@ nav a {
 .imgHolder {
   width: 33%;
   padding-right: 16px;
+  cursor: pointer;
 }
 
 .itemCardImg {
@@ -81,7 +127,7 @@ nav a {
 }
 
 .itemCardProductInfo {
-  width: 47%;
+  width: 43%;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 0.9rem;
@@ -95,6 +141,8 @@ nav a {
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 12px;
+  display: inline-block;
+  color: blue;
 }
 
 .shopProductName:hover {
@@ -107,10 +155,10 @@ nav a {
 }
 
 .itemCardPurchase {
-  width: 20%;
+  width: 24%;
   padding-left: 16px;
   text-align: center;
-  line-height: 30px;
+  line-height: 50px;
 }
 
 .itemCardPurchase button {
@@ -121,9 +169,18 @@ nav a {
   border: none;
   border-radius: 8px;
   font-weight: 700;
+  font-size: 14px;
   background-color: #FFD814;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
 }
 
 .itemCardPurchase button:hover {
   background-color: #F7CA00;
+}
+
+.itemCardPurchase button img {
+  height: 18px;
 }

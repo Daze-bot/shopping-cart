@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from '../imgs/cart-filled.svg';
 
 const ItemCard = (props) => {
   return (
@@ -13,7 +14,10 @@ const ItemCard = (props) => {
       </div>
       <div className="itemCardPurchase">
         <h2>${props.price}</h2>
-        <button>Add to Cart</button>
+        <button>
+          <img src={Cart} alt="Cart"></img>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

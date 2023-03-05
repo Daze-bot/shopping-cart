@@ -18,31 +18,37 @@ const Shop = () => {
   const handleAllProducts = () => {
     setProductType(allProducts);
     setShopCategory('All Products');
+    window.scrollTo(0,0);
   }
 
   const handleConsoles = () => {
     setProductType(consoles);
     setShopCategory('Consoles');
+    window.scrollTo(0,0);
   }
 
   const handleControllers = () => {
     setProductType(controllers);
     setShopCategory('Controllers');
+    window.scrollTo(0,0);
   }
 
   const handleHeadsets = () => {
     setProductType(headsets);
     setShopCategory('Headsets');
+    window.scrollTo(0,0);
   }
 
   const handleKeyboards = () => {
     setProductType(keyboards);
     setShopCategory('Keyboards');
+    window.scrollTo(0,0);
   }
 
   const handleMice = () => {
     setProductType(mice);
     setShopCategory('Mice');
+    window.scrollTo(0,0);
   }
 
   return (
@@ -54,6 +60,7 @@ const Shop = () => {
         headsets={handleHeadsets}
         keyboards={handleKeyboards}
         mice={handleMice}
+        category={shopCategory}
       />
       <div className="shopItemDisplay">
         <h1>{shopCategory}</h1>
