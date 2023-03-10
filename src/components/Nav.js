@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartImg from "../imgs/cart-white.svg";
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <nav>
       <Link to={'/'}>
@@ -17,7 +18,13 @@ const Nav = () => {
         <Link to={'/contact'}>
           <li>Contact</li>
         </Link>
-        <li className="navCart">CART(Change)</li>
+        <li className="navCart">
+          <img src={CartImg} alt="Cart"></img>
+          {props.cart.length > 0 && 
+            <div className="numberCart">{props.cart.length}</div>
+          }
+          <p>Cart</p>
+        </li>
       </ul>
     </nav>
   );

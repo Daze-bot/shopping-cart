@@ -14,7 +14,7 @@ const ItemCard = (props) => {
       </div>
       <div className="itemCardPurchase">
         <h2>${props.price}</h2>
-        <button>
+        <button onClick={() => props.addToCart(props.product)}>
           <img src={Cart} alt="Cart"></img>
           Add to Cart
         </button>

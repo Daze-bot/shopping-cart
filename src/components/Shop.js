@@ -9,7 +9,7 @@ import ItemCard from "./ItemCard";
 import ShopSidebar from "./ShopSidebar";
 import moment from "moment";
 
-const Shop = () => {
+const Shop = (props) => {
   const [productType, setProductType] = useState(allProducts);
   const [shopCategory, setShopCategory] = useState('All Products');
   const shippingDate = moment().add(5, 'd').format('ddd, MMM D');
@@ -66,12 +66,14 @@ const Shop = () => {
         <h1>{shopCategory}</h1>
         {productType.map((product) => {
           return <ItemCard
+            product={product}
             key={product.id}
             name={product.name}
             image={product.image}
             price={product.price}
             shipping={shippingDate}
             pickup={pickupDate}
+            addToCart={props.addToCart}
           />
         })}
       </div>

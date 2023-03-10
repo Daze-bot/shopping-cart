@@ -9,12 +9,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
   const [cart, setCart] = useState([]);
 
+  const addToCart = (product) => {
+    const productObj = product;
+    setCart([...cart, productObj]);
+  }
+
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav 
+        cart={cart}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route 
+          path="/shop" 
+          element={<Shop 
+            addToCart={addToCart}
+          />} 
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

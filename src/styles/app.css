@@ -41,13 +41,41 @@ nav a {
   cursor: pointer;
 }
 
+.navCart {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.navCart img {
+  height: 30px;
+}
+
+.numberCart{
+  font-size: 14px;
+  border: none;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFD814;
+  color: black;
+  position: absolute;
+  left: 16px;
+  top: -4px;
+}
+
 .shopPage {
   padding-left: 64px;
   padding-right: 64px;
   padding-top: 16px;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   min-width: 1010px;
   max-width: 1600px;
   margin: 0 auto;
@@ -57,7 +85,7 @@ nav a {
 .shopSidebar {
   min-width: 250px;
   position: sticky;
-  top: 73px;
+  top: 111px;
   padding-top: 53px;
 }
 
@@ -105,7 +133,7 @@ nav a {
 .itemCard {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   min-height: 235px;
   min-width: 600px;
   padding-top: 2rem;
