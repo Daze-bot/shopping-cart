@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import './styles/app.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemPage from "./components/ItemPage";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -26,6 +27,10 @@ const App = () => {
           element={<Shop 
             addToCart={addToCart}
           />} 
+        />
+        <Route 
+          path="/shop/:id"
+          element={<ItemPage />}
         />
         <Route path="/contact" element={<Contact />} />
       </Routes>

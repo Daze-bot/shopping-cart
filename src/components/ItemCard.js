@@ -1,5 +1,6 @@
 import React from "react";
 import Cart from '../imgs/cart-filled.svg';
+import { Link } from "react-router-dom";
 
 const ItemCard = (props) => {
   return (
@@ -8,7 +9,9 @@ const ItemCard = (props) => {
         <img className="itemCardImg" src={props.image} alt={props.name}></img>
       </div>
       <div className="itemCardProductInfo">
-        <h3 className="shopProductName">{props.name}</h3>
+        <h3 className="shopProductName">
+          <Link to={`/shop/${props.id}`}>{props.name}</Link>
+        </h3>
         <p>FREE Delivery: <span>{props.shipping}</span> </p>
         <p>Store Pickup: <span>{props.pickup}</span> </p>
       </div>

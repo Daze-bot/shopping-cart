@@ -165,15 +165,18 @@ nav a {
   margin-bottom: 8px;
 }
 
-.shopProductName {
+.shopProductName,
+.itemCardProductInfo a {
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 12px;
   display: inline-block;
   color: blue;
+  text-decoration: none;
 }
 
-.shopProductName:hover {
+.shopProductName:hover,
+.itemCardProductInfo a:hover {
   cursor: pointer;
   color: #c45500;
 }
