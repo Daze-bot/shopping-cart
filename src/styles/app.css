@@ -215,3 +215,8 @@ nav a {
 .itemCardPurchase button img {
   height: 18px;
 }
+
+.itemPage {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useState} from "react";
 import allProducts from '../products/allProducts';
 import consoles from "../products/consoles";
 import controllers from "../products/controllers";
