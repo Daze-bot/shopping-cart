@@ -6,13 +6,22 @@ import Nav from "./components/Nav";
 import './styles/app.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemPage from "./components/ItemPage";
+import Cart from "./components/Cart";
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    const productObj = product;
-    setCart([...cart, productObj]);
+  const addToCart = (product, amount = 1) => {
+    if (cart.some(obj => obj.id === product.id)){
+      const cartCopy = [...cart];
+      const itemIndex = cartCopy.findIndex(x => x.id === product.id);
+      cartCopy[itemIndex].quantity += amount;
+      setCart(cartCopy);
+    }
+    else {
+      product.quantity = amount;
+      setCart([...cart, product]);
+    }
   }
 
   return (
@@ -30,7 +39,15 @@ const App = () => {
         />
         <Route 
           path="/shop/:id"
-          element={<ItemPage />}
+          element={<ItemPage 
+            addToCart={addToCart}
+          />}
+        />
+        <Route 
+          path="/shop/cart"
+          element={<Cart
+            cart={cart}
+          />}
         />
         <Route path="/contact" element={<Contact />} />
       </Routes>
