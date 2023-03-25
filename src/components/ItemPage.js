@@ -24,7 +24,6 @@ const ItemPage = (props) => {
       <p>{item.price}</p>
       {item.console && 
         <p>Console: {item.console}</p>}
-      <p>{item.type}</p>
       <div className="itemQuantitySelector">
         <label htmlFor="itemQuantity">Quantity</label>
         <input
