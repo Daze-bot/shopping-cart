@@ -24,7 +24,7 @@ const Cart = (props) => {
       })}
       <p className="cartSubtotal">Subtotal: ${preTaxPriceDisplay}</p>
       <p className="cartTax">Tax: ${taxDisplay}</p>
-      <p className="cartTotal">Total: ${afterTaxPrice}</p>
+      <p className="cartTotal">Total: ${afterTaxPriceDisplay}</p>
     </div>
   )
 };
