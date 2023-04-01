@@ -220,3 +220,46 @@ nav a {
   display: flex;
   flex-direction: column;
 }
+
+.cart {
+  position: relative;
+}
+
+.fakeShopAlert {
+  background-color: #333;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  margin-left: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+.fakeShopAlert button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(187, 0, 0);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.fakeShopAlert button:hover {
+  background-color: rgb(134, 0, 0);
+  color: white;
+}
