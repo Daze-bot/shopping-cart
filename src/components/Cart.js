@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { round } from "lodash";
 import CartItem from "./CartItem";
+import FakeShopAlert from "./FakeShopAlert";
 
 const Cart = (props) => {
   const preTaxPrice = props.cart.reduce((prev, cur) => prev + cur.quantity * cur.price, 0);
@@ -11,8 +12,24 @@ const Cart = (props) => {
   const taxDisplay = tax.toFixed(2);
   const afterTaxPriceDisplay = afterTaxPrice.toFixed(2);
 
+  const [checkedOut, setCheckedOut] = useState(false);
+  
+  const closeAlert = () => {
+    setCheckedOut(false);
+  }
+
+  const handleCheckOut = () => {
+    setCheckedOut(true);
+  }
+
   return (
     <div className="cart">
+      {checkedOut &&
+        <FakeShopAlert 
+          closeAlert={closeAlert}
+          clearCart={props.clearCart}
+        />
+      }
       <h1>Cart Items</h1>
       {props.cart.map(item => {
         return (
@@ -31,8 +48,7 @@ const Cart = (props) => {
       <p className="cartSubtotal">Subtotal: ${preTaxPriceDisplay}</p>
       <p className="cartTax">Tax: ${taxDisplay}</p>
       <p className="cartTotal">Total: ${afterTaxPriceDisplay}</p>
-      <button>Proceed to Checkout</button>
-      <button onClick={props.clearCart}>Empty Cart</button>
+      <button onClick={handleCheckOut}>Proceed to Checkout</button>
     </div>
   )
 };

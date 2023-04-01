@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Contact from "./components/Contact";
@@ -9,7 +9,9 @@ import ItemPage from "./components/ItemPage";
 import Cart from "./components/Cart";
 
 const App = () => {
-  const [cart, setCart] = useState([]);
+  const storedCart = JSON.parse(window.localStorage.getItem('shoppingCart')) || [];
+
+  const [cart, setCart] = useState(storedCart);
 
   const addToCart = (product, amount = 1) => {
     if (cart.some(obj => obj.id === product.id)){
@@ -40,6 +42,10 @@ const App = () => {
   const clearCart = () => {
     setCart([]);
   }
+
+  useEffect(() => {
+    window.localStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }, [cart])
 
   return (
     <BrowserRouter>
