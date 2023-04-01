@@ -24,6 +24,23 @@ const App = () => {
     }
   }
 
+  const updateCartQuantity = (product, amount) => {
+    const cartCopy = [...cart];
+    const itemIndex = cartCopy.findIndex(x => x.id === product.id);
+    cartCopy[itemIndex].quantity = amount;
+    setCart(cartCopy);
+  }
+
+  const removeCartItem = (id) => {
+    const cartCopy = [...cart];
+    const itemRemoved = cartCopy.filter(x => x.id !== id);
+    setCart(itemRemoved);
+  }
+
+  const clearCart = () => {
+    setCart([]);
+  }
+
   return (
     <BrowserRouter>
       <Nav 
@@ -47,6 +64,9 @@ const App = () => {
           path="/shop/cart"
           element={<Cart
             cart={cart}
+            updateQuantity={updateCartQuantity}
+            removeCartItem={removeCartItem}
+            clearCart={clearCart}
           />}
         />
         <Route path="/contact" element={<Contact />} />
