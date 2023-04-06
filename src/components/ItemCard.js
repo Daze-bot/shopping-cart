@@ -6,7 +6,9 @@ const ItemCard = (props) => {
   return (
     <div className="itemCard">
       <div className="imgHolder">
-        <img className="itemCardImg" src={props.image} alt={props.name}></img>
+        <Link to={`/shop/${props.id}`}>
+          <img className="itemCardImg" src={props.image} alt={props.name}></img>
+        </Link>
       </div>
       <div className="itemCardProductInfo">
         <h3 className="shopProductName">

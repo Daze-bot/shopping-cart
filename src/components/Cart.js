@@ -30,7 +30,7 @@ const Cart = (props) => {
           clearCart={props.clearCart}
         />
       }
-      <h1>Cart Items</h1>
+      <h1>Shopping Cart</h1>
       {props.cart.map(item => {
         return (
           <CartItem 

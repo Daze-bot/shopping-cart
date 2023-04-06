@@ -1,3 +1,7 @@
+:root {
+  --amazon-blue: #131921;
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -9,16 +13,18 @@
 
 #root {
   position: relative;
+  background-color: #E3E6E6;
+  min-height: 100vh;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   min-height: 95px;
   min-width: 1010px;
-  background-color: #333;
-  color: white;
+  background-color: var(--amazon-blue);
+  color: white; 
   position: sticky;
   top: 0;
   z-index: 100;
@@ -31,9 +37,14 @@ nav {
   align-items: center;
 }
 
+.navLinks a {
+  font-weight: bold;
+}
+
 nav a {
   text-decoration: none;
   color: white;
+  align-self: center;
 }
 
 .navCart,
@@ -69,17 +80,25 @@ nav a {
   top: -4px;
 }
 
-.shopPage {
+.shopPage,
+.cart,
+.contact,
+.itemPage {
   padding-left: 64px;
   padding-right: 64px;
   padding-top: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   min-width: 1010px;
   max-width: 1600px;
   margin: 0 auto;
   position: relative;
+  background-color: white;
+  min-height: calc(100vh - 95px);
+}
+
+.shopPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .shopSidebar {
@@ -101,6 +120,7 @@ nav a {
 .shopCategories p {
   font-weight: bold;
   margin-bottom: 1rem;
+  align-self: center;
 }
 
 .shopCategories li {
@@ -217,31 +237,94 @@ nav a {
 }
 
 .itemPage {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.cart {
+.itemPageContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 1010px;
+  margin-top: 20px;
+}
+
+.itemPageImgHolder {
+  width: 60%;
+  padding-right: 50px;
+}
+
+.itemPageImg {
+  max-height: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.itemPageInfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pageProductName {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.returnToShop {
   position: relative;
+  top: -10px;
+  left: -50px;
+  font-size: .8rem;
+  align-self: flex-start;
+}
+
+.returnToShop a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.774);
+}
+
+.returnToShop span {
+  cursor: pointer;
+}
+
+.returnToShop span:hover {
+  text-decoration: underline;
+}
+
+.fakeShopBackground {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  top: 0;
+  left: 0;
 }
 
 .fakeShopAlert {
   background-color: #333;
   border-radius: 12px;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 60px;
   color: white;
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 200px;
-  margin-left: -200px;
+  width: 600px;
+  height: 400px;
+  margin-left: -300px;
+  margin-top: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   z-index: 100;
+  font-weight: bold;
 }
 
 .fakeShopAlert button {
@@ -254,12 +337,12 @@ nav a {
   border-radius: 4px;
   border: none;
   font-weight: bold;
-  background-color: rgb(187, 0, 0);
+  background-color: rgb(160, 0, 0);
   color: white;
   font-size: 1.5rem;
 }
 
 .fakeShopAlert button:hover {
-  background-color: rgb(134, 0, 0);
+  background-color: rgb(187, 0, 0);
   color: white;
 }
