@@ -6,7 +6,6 @@ const CartItem = (props) => {
 
   const updateCartQuantity = (e) => {
     setCartQuantity(e.target.value);
-    console.log(cartQuantity)
   }
 
   useEffect(() => {
@@ -30,7 +29,7 @@ const CartItem = (props) => {
         ></input>
       </div>
       <p>Price: ${(props.quantity * props.price).toFixed(2)}</p>
-      <button onClick={() => props.removeCartItem(props.id)}>Remove</button>
+      <button onClick={() => props.removeCartItem(props.id)}>Remove from Cart</button>
     </div>
   )
 } 

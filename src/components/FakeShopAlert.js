@@ -9,7 +9,7 @@ const FakeShopAlert = (props) => {
   return (
     <div className="fakeShopBackground">
       <div className="fakeShopAlert">
-        <p>This is not a real shop. This website was made for educational purposes.</p>
+        <p>This is not a real store. This website was made for educational purposes.</p>
         <button onClick={handleClick}>X</button>
       </div>
     </div>
