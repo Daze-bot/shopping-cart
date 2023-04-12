@@ -3,6 +3,11 @@
   --amazon-price: #b12704;
 }
 
+@font-face {
+  font-family: 'store-name';
+  src: url(../fonts/BruceForeverRegular-X3jd2.ttf);
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -29,6 +34,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .navLinks {
@@ -57,6 +63,21 @@ nav a {
   cursor: pointer;
 }
 
+.navLogo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.navLogo p {
+  font-family: 'store-name';
+  font-size: .8rem;
+}
+
+.navLogoImg {
+  width: 70px;
+}
+
 .navCart {
   display: flex;
   position: relative;
@@ -83,6 +104,59 @@ nav a {
   position: absolute;
   left: 16px;
   top: -4px;
+}
+
+.home {
+  min-height: calc(100vh - 95px);
+  background-image: url('../imgs/gaming4.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15vh;
+  padding-top: 72px;
+  min-width: 1010px;
+}
+
+.home h1 {
+  font-family: 'store-name';
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
+  background-color: var(--amazon-blue);
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.home h1 img {
+  width: 80px;
+}
+
+.homeLinks {
+  width: 1010px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.homeLinks button {
+  cursor: pointer;
+  padding: 30px 50px;
+  border-radius: 16px;
+  font-size: 2.4rem;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: var(--amazon-blue);
+  font-weight: bold;
+  border: none;
+}
+
+.homeLinks button:hover {
+  background-color: var(--amazon-blue);
+  color: white;
 }
 
 .shopPage,
@@ -339,11 +413,7 @@ nav a {
   display: flex;
   border-radius: 45px;
   background-color: #E3E6E6;
-  align-items: center;
-}
-
-.customNumContainer:hover {
-  outline: 2px solid gray;
+  outline: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .customNumContainer button {
@@ -351,15 +421,25 @@ nav a {
   background-color: #E3E6E6;
   cursor: pointer;
   font-size: 1.3rem;
+  z-index: 5;
+  transition: 50ms;
+}
+
+.customNumContainer button:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.customNumContainer button:active {
+  box-shadow: none;
 }
 
 .decrementNum {
-  padding: 3px 5px 3px 20px;
+  padding: 3px 8px 3px 20px;
   border-radius: 45px 0 0 45px;
 }
 
 .incrementNum {
-  padding: 3px 20px 3px 5px;
+  padding: 3px 20px 3px 6px;
   border-radius: 0 45px 45px 0;
 }
 
@@ -369,7 +449,7 @@ nav a {
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
-  background-color: #E3E6E6;
+  background-color: #e3e6e6;
   cursor: default;
   color: transparent;
   text-shadow: 0px 0px black;
@@ -485,3 +565,38 @@ nav a {
   background-color: rgb(187, 0, 0);
   color: white;
 }
+
+.itemAdded {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  top: 58px;
+  background-color: white;
+  border: 3px solid #F7CA00;
+  padding: 20px;
+  width: 400px;
+  margin-left: -200px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  z-index: 1000;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+}
+
+.itemAdded p {
+  width: 100%;
+  text-align: center;
+}
+
+.itemAdded img {
+  width: 30px;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  60% {opacity: 1;}
+  100% {opacity: 0;} 
+} 

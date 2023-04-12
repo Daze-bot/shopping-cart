@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartImg from "../imgs/cart-white.svg";
+import Logo from '../imgs/storeIcon.png';
 
 const Nav = (props) => {
   const totalQuantity = props.cart.reduce((prev, cur) => prev + cur.quantity, 0);
@@ -8,7 +9,14 @@ const Nav = (props) => {
   return (
     <nav>
       <Link to={'/'}>
-        <h3 className="navLogo">LOGO(Change)</h3>
+        <div className="navLogo">
+          <div className="navTitle">
+            <p>All</p>
+            <p>Things</p>
+            <p>Gaming</p>
+          </div>
+          <img className="navLogoImg" src={Logo} alt="Logo"></img>
+        </div>
       </Link>
       <ul className="navLinks">
         <Link to={'/'}>

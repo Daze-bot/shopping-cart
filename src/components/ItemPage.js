@@ -4,6 +4,7 @@ import allProducts from "../products/allProducts";
 import { Link } from "react-router-dom";
 import Cart from '../imgs/cart-filled.svg';
 import moment from "moment";
+import AddedToCart from "./AddedToCart";
 
 const ItemPage = (props) => {
   const params = useParams();
@@ -11,6 +12,7 @@ const ItemPage = (props) => {
   
   const [item, setItem] = useState({})
   const [itemQuantity, setItemQuantity] = useState(1);
+  const [itemAdded, setItemAdded] = useState(false);
 
   const shippingDate = moment().add(5, 'd').format('ddd, MMM D');
   const pickupDate = moment().add(2, 'd').format('ddd, MMM D');
@@ -38,8 +40,22 @@ const ItemPage = (props) => {
     return;
   }
 
+  const handleAddToCart = () => {
+    setItemAdded(true);
+    props.addToCart(item, parseInt(itemQuantity))
+  }
+
+  const removeAlert = () => {
+    setItemAdded(false);
+  }
+
   return (
     <div className="itemPage">
+      {itemAdded &&
+        <AddedToCart 
+          removeAlert={removeAlert}
+        />
+      }
       <p className="returnToShop">{'< '}
         <Link to={'/shop'}><span>Back to shop</span></Link>  
       </p>
@@ -79,7 +95,7 @@ const ItemPage = (props) => {
                 <button className="incrementNum" onClick={incrementQuantity}>+</button>
               </div>
             </div>
-            <button className="addToCartBtn" onClick={() => props.addToCart(item, parseInt(itemQuantity))}>
+            <button className="addToCartBtn" onClick={handleAddToCart}>
               <img src={Cart} alt="Cart"></img>
               Add to Cart
             </button>
