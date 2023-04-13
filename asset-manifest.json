@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.81322131.css",
-    "main.js": "/shopping-cart/static/js/main.d72ae32e.js",
+    "main.js": "/shopping-cart/static/js/main.15d09323.js",
     "static/media/gaming4.jpg": "/shopping-cart/static/media/gaming4.9f52c99d3c57e4b8f959.jpg",
     "static/media/xbox-series-x.png": "/shopping-cart/static/media/xbox-series-x.3a1a4046050fca2f8072.png",
     "static/media/ps4-controller.webp": "/shopping-cart/static/media/ps4-controller.ba172f03c5d00a65e26c.webp",
@@ -36,10 +36,10 @@
     "static/media/cart-filled.svg": "/shopping-cart/static/media/cart-filled.e2ee59b1e5000557dd8eddb08d7feacc.svg",
     "static/media/cart-white.svg": "/shopping-cart/static/media/cart-white.46cb7d4b356f96f7ba56278ed3f0bcbd.svg",
     "main.81322131.css.map": "/shopping-cart/static/css/main.81322131.css.map",
-    "main.d72ae32e.js.map": "/shopping-cart/static/js/main.d72ae32e.js.map"
+    "main.15d09323.js.map": "/shopping-cart/static/js/main.15d09323.js.map"
   },
   "entrypoints": [
     "static/css/main.81322131.css",
-    "static/js/main.d72ae32e.js"
+    "static/js/main.15d09323.js"
   ]
 }
