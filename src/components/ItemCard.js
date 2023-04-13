@@ -23,13 +23,13 @@ const ItemCard = (props) => {
         />
       }
       <div className="imgHolder">
-        <Link to={`/shop/${props.id}`}>
+        <Link to={`/shopping-cart/shop/${props.id}`}>
           <img className="itemCardImg" src={props.image} alt={props.name}></img>
         </Link>
       </div>
       <div className="itemCardProductInfo">
         <h3 className="shopProductName">
-          <Link to={`/shop/${props.id}`}>{props.name}</Link>
+          <Link to={`/shopping-cart/shop/${props.id}`}>{props.name}</Link>
         </h3>
         <p>FREE Delivery: <span>{props.shipping}</span> </p>
         <p>Store Pickup: <span>{props.pickup}</span> </p>

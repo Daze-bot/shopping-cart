@@ -53,21 +53,21 @@ const App = () => {
         cart={cart}
       />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/shopping-cart/" element={<Home />} />
         <Route 
-          path="/shop" 
+          path="/shopping-cart/shop" 
           element={<Shop 
             addToCart={addToCart}
           />} 
         />
         <Route 
-          path="/shop/:id"
+          path="/shopping-cart/shop/:id"
           element={<ItemPage 
             addToCart={addToCart}
           />}
         />
         <Route 
-          path="/shop/cart"
+          path="/shopping-cart/shop/cart"
           element={<Cart
             cart={cart}
             updateQuantity={updateCartQuantity}
@@ -75,7 +75,7 @@ const App = () => {
             clearCart={clearCart}
           />}
         />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/shopping-cart/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )

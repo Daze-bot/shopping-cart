@@ -7,10 +7,10 @@ const Home = () => {
     <div className="home">
       <h1>All Things Gaming <img src={Logo} alt="Logo"></img></h1>
       <div className="homeLinks">
-        <Link to={'/shop'}>
+        <Link to={'/shopping-cart/shop'}>
           <button>Shop Now!</button>
         </Link>
-        <Link to={'/contact'}>
+        <Link to={'/shopping-cart/contact'}>
           <button>Contact Us</button>
         </Link>
       </div>

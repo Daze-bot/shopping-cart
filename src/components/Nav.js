@@ -8,7 +8,7 @@ const Nav = (props) => {
 
   return (
     <nav>
-      <Link to={'/'}>
+      <Link to={'/shopping-cart/'}>
         <div className="navLogo">
           <div className="navTitle">
             <p>All</p>
@@ -19,16 +19,16 @@ const Nav = (props) => {
         </div>
       </Link>
       <ul className="navLinks">
-        <Link to={'/'}>
+        <Link to={'/shopping-cart/'}>
           <li>Home</li>
         </Link>
-        <Link to={'/shop'}>
+        <Link to={'/shopping-cart/shop'}>
           <li>Shop</li>
         </Link>
-        <Link to={'/contact'}>
+        <Link to={'/shopping-cart/contact'}>
           <li>Contact</li>
         </Link>
-        <Link to={'/shop/cart'}>
+        <Link to={'/shopping-cart/shop/cart'}>
           <li className="navCart">
             <img src={CartImg} alt="Cart"></img>
             {props.cart.length > 0 && 

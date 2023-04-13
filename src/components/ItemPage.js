@@ -57,7 +57,7 @@ const ItemPage = (props) => {
         />
       }
       <p className="returnToShop">{'< '}
-        <Link to={'/shop'}><span>Back to shop</span></Link>  
+        <Link to={'/shopping-cart/shop'}><span>Back to shop</span></Link>  
       </p>
       <div className="itemPageContent">
         <div className="itemPageImgHolder">
