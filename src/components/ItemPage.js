@@ -103,7 +103,7 @@ const ItemPage = (props) => {
         </div>
       </div>
       <div className="itemDescription">
-        <h3>Item Description</h3>
+        <h3>Product Description</h3>
         <p>{item.description}</p>
       </div>
       <h3 className="itemReviews">Customer Reviews</h3>
