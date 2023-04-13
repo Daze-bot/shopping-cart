@@ -548,11 +548,28 @@ nav a {
   text-decoration: underline;
 }
 
-.itemReviews,
+.itemReviews {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
 .itemDescription {
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
+}
+
+.itemDescription h3 {
+  margin-bottom: 10px;
+}
+
+.itemDescription p {
+  font-size: .9rem;
+  color: rgb(53, 53, 53);
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: start;
 }
 
 .fakeShopBackground {
