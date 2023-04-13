@@ -102,6 +102,7 @@ const ItemPage = (props) => {
           </div>
         </div>
       </div>
+      <h3 className="itemDescription">Item Description</h3>
       <h3 className="itemReviews">Customer Reviews</h3>
     </div>
   );

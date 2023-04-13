@@ -11,6 +11,7 @@ const headsets = [
     image: RazerNari,
     type: 'headsets',
     id: 10,
+    description: "Razer Nari Ultimate: 2.4GHz wireless PC gaming headset equipped with HyperSense technology for an additional layer of immersion. The swiveling earcups are equipped with cooling gel-infused cushions with memory foam that reduce heat buildup for comfortable gaming. THX Spatial Audio delivers next-generation virtual surround sound, while Game/Chat Balance in wireless mode provides the perfect mix of game and chat volume. The headset also functions in wired mode with both USB and 3.5 mm analog options. Powered by Razer Chroma. Frequency Response 20 Hz - 20 kHz.",
   },
   {
     name: 'HyperX - Cloud Alpha Wireless Headset',

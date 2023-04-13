@@ -1,6 +1,7 @@
 :root {
   --amazon-blue: #131921;
   --amazon-price: #b12704;
+  --link-blue: #0066C0;
 }
 
 @font-face {
@@ -128,7 +129,8 @@ nav a {
   color: white;
   font-size: 4rem;
   background-color: var(--amazon-blue);
-  padding: 8px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.5);
+  padding: 18px;
   border-radius: 20px;
 }
 
@@ -204,7 +206,7 @@ nav a {
 
 .shopCategories li {
   display: inline-block;
-  color: blue;
+  color: var(--link-blue);
 }
 
 .list-item.active {
@@ -270,7 +272,7 @@ nav a {
   font-weight: 400;
   margin-bottom: 12px;
   display: inline-block;
-  color: blue;
+  color: var(--link-blue);
   text-decoration: none;
 }
 
@@ -402,14 +404,24 @@ nav a {
   gap: 20px;
 }
 
-.itemQuantitySelector {
+.itemQuantitySelector,
+.cartQuantitySelector {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
 
-.customNumContainer {
+.cartQuantitySelector {
+  gap: 4px;
+}
+
+.cartQuantitySelector label {
+  font-size: .9rem;
+}
+
+.customNumContainer,
+.cartNumContainer {
   display: flex;
   border-radius: 45px;
   background-color: #E3E6E6;
@@ -421,15 +433,25 @@ nav a {
   background-color: #E3E6E6;
   cursor: pointer;
   font-size: 1.3rem;
-  z-index: 5;
   transition: 50ms;
 }
 
-.customNumContainer button:hover {
+.cartNumContainer button {
+  border: none;
+  background-color: #E3E6E6;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: 50ms;
+}
+
+.customNumContainer button:hover,
+.cartNumContainer button:hover {
+  z-index: 5;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
-.customNumContainer button:active {
+.customNumContainer button:active,
+.cartNumContainer button:active {
   box-shadow: none;
 }
 
@@ -438,12 +460,21 @@ nav a {
   border-radius: 45px 0 0 45px;
 }
 
+.cartNumContainer .decrementNum {
+  padding: 2px 8px 2px 10px;
+}
+
 .incrementNum {
   padding: 3px 20px 3px 6px;
   border-radius: 0 45px 45px 0;
 }
 
-#itemQuantity {
+.cartNumContainer .incrementNum {
+  padding: 2px 10px 2px 6px;
+}
+
+#itemQuantity,
+.cartQuantity {
   appearance: none;
   border: none;
   font-size: 1rem;
@@ -456,11 +487,18 @@ nav a {
   width: 35px;
 }
 
-#itemQuantity:enabled {
+.cartQuantity {
+  font-size: .9rem;
+  width: 30px;
+}
+
+#itemQuantity:enabled,
+.cartQuantity:enabled {
   outline: none;
 }
 
-#itemQuantity::-webkit-inner-spin-button {
+#itemQuantity::-webkit-inner-spin-button,
+.cartQuantity::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -510,9 +548,11 @@ nav a {
   text-decoration: underline;
 }
 
-.itemReviews {
+.itemReviews,
+.itemDescription {
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
   padding-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .fakeShopBackground {
@@ -542,7 +582,7 @@ nav a {
   justify-content: center;
   align-items: center;
   font-size: 2.3rem;
-  z-index: 100;
+  z-index: 400;
   font-weight: bold;
 }
 
@@ -610,11 +650,11 @@ nav a {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  gap: 10px;
 }
 
 .allContacts p {
   line-height: 1.5rem;
+  color: rgb(83, 83, 83);
 }
 
 .allContacts img {
@@ -623,12 +663,16 @@ nav a {
 
 .contactGitHub,
 .contactTwitter {
-  max-width: 310px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
   gap: 16px;
+  border: 1px solid var(--amazon-blue);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .contactGitHub img {
@@ -654,6 +698,139 @@ nav a {
 .allContacts button:hover {
   background-color: var(--amazon-blue);
   color: white;
+}
+
+.cart {
+  display: flex;
+  background-color: #E3E6E6;
+  align-items: flex-start;
+  justify-content: stretch;
+  gap: 20px;
+}
+
+.cartMain {
+  background-color: white;
+  width: 75%;
+  padding: 20px;
+  margin-bottom: 64px;
+}
+
+.cartPrice {
+  text-align: end;
+  font-size: .85rem;
+  color: rgb(82, 82, 82);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+  padding-bottom: 4px;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cartSubtotalMain {
+  text-align: end;
+  margin-bottom: 35px;
+  padding-top: 12px;
+}
+
+.cartSide {
+  background-color: white;
+  width: 25%;
+  padding: 20px 20px 25px;
+  line-height: 1.5rem;
+  text-align: end;
+}
+
+.cartSide button {
+  cursor: pointer;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #FFD814;
+  margin-top: 10px;
+}
+
+.cartSide button:hover {
+  background-color: #F7CA00;
+}
+
+.cart span {
+  font-weight: bold;
+}
+
+.cartSubtotalMain,
+.cartSubtotal,
+.cartTax,
+.cartTotal {
+  font-size: 1.3rem;
+}
+
+.cartItem {
+  padding: 12px;
+  padding-right: 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+  display: flex;
+  margin-top: 12px;
+}
+
+.cartImgHolder {
+  padding-right: 24px;
+  width: 30%;
+}
+
+.cartItemImg {
+  max-height: 180px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.cartItemInfo {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartItemName {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.cartItemPrice {
+  width: 15%;
+  text-align: end;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.cartDelivery p{
+  font-size: .9rem;
+  margin-bottom: 8px;
+  color: rgb(54, 54, 54);
+}
+
+.cartNumberItems {
+  display: flex;
+  gap: 18px;
+}
+
+.cartQuantitySelector {
+  padding-right: 18px;
+  border-right: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.removeCartItem {
+  border: none;
+  background-color: white;
+  color: var(--link-blue);
+  cursor: pointer;
+  padding: 0;
 }
 
 @keyframes fadeOut {

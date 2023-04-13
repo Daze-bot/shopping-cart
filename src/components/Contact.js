@@ -9,8 +9,8 @@ const Contact = () => {
       <div className="allContacts">
         <div className="contactGitHub">
           <img src={GitHub} alt="GitHub"></img>
-          <h3>Behing the Scenes</h3>
-          <p>Take a look at the code behind this website, as well as many other projects made by the developer. More to come!</p>
+          <h3>Behind the Scenes</h3>
+          <p>Take a look at the code for this website, as well as many other projects made by the developer. More to come!</p>
           <a href="https://github.com/Daze-bot" target="blank">
             <button>GitHub</button>
           </a>
