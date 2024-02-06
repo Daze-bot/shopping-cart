@@ -45,7 +45,7 @@ The purpose of this project was to create the front-end for an online shopping a
 - Navigating the store:
 <div align="center">
   <kbd>
-    <img width=50% src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHMxZjE5dzZxNGlvemt0aHg5cWtwNmxkeTluN3h1MHJyZTBubG9vcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UolvZlJ67Iajwlfeto/giphy.gif"/>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHMxZjE5dzZxNGlvemt0aHg5cWtwNmxkeTluN3h1MHJyZTBubG9vcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UolvZlJ67Iajwlfeto/giphy.gif"/>
   </kbd>
 </div>
 
