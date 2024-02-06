@@ -4,27 +4,28 @@ A fake online shop with full functionality
 
 <div align="center">
   <kbd>
-    <img src="https://github.com/Daze-bot/portfolio/blob/main/src/imgs/projectScreenshots/shopping-cart.png?raw=true" />
+    <img src="https://i.imgur.com/IbK4CVg.png" />
   </kbd>
 </div>
 
 ## Description
 
-Users must find a series of hidden images within a crowded picture in order to progress to the next round.  The user's time is kept throughout the game and upon finding all of the images, the final time is entered in the global leaderboard
+The purpose of this project was to create the front-end for an online shopping app. Users are able to browse and sort all available products, add items to the cart, edit the cart, and checkout
 
-### <a href="https://daze-bot.github.io/photo-tagging/" target="_blank">View Live</a>
+### <a href="https://daze-bot.github.io/shopping-cart/" target="_blank">View Live</a>
 
 ### Features
 
-- Instructions
-- Interactive gameplay
-- Leaderboards
+- Easy navigation
+- Enhanced product details
+- Cart management and checkout
+- Contact page
 
 ### Built with
 
 - React
 - React-Router
-- Firebase
+- GitHub pages
 
 ## Getting started
 
@@ -41,18 +42,27 @@ Users must find a series of hidden images within a crowded picture in order to p
 
 ### Usage
 
-- Navigating the menu:
+- Navigating the store:
 <div align="center">
   <kbd>
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjRoMm5pczZrNHlmbmQ0ZWRqdGRiNWF0ZnNneWJoaWpndXk1ZzkxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0ZTQ7z3tNoiSM1CV8r/giphy.gif"/>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHMxZjE5dzZxNGlvemt0aHg5cWtwNmxkeTluN3h1MHJyZTBubG9vcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UolvZlJ67Iajwlfeto/giphy.gif"/>
   </kbd>
 </div>
 
 <br></br>
 
-- Submitting final score:
+- Product details and adding to cart:
 <div align="center">
   <kbd>
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzM0b2tsYjQxMnN1ZXhnOTBudTd2bWJyZTFscmI3cGtwcnBqbmY2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eaxJnze9luw7z6AJl6/giphy.gif"/>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGxqdzVsZWl5NHVvc3UwZGl0enFrNjE0ODZ1aTI5a2N0cGdmdTBqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LkmUVui7vd9pMajEv0/giphy.gif"/>
+  </kbd>
+</div>
+
+<br></br>
+
+- Cart management:
+<div align="center">
+  <kbd>
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2o4ZDEzbTNxOTY3eHA3cWpjeWlocGZmbmVxd2tpZ3Uzc2YyNjI4aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uehPvkbC7pulS05d7e/giphy.gif"/>
   </kbd>
 </div>
