@@ -4,7 +4,7 @@ A fake online shop with full functionality
 
 <div align="center">
   <kbd>
-    <img src="https://github.com/Daze-bot/portfolio/blob/main/src/imgs/projectScreenshots/shopping-cart.png?" />
+    <img src="https://github.com/Daze-bot/portfolio/blob/main/src/imgs/projectScreenshots/shopping-cart.png?raw=true" />
   </kbd>
 </div>
 
